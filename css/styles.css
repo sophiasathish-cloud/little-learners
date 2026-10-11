@@ -1,0 +1,18 @@
+:root{--bg:#fff6e5;--ink:#2b2b3a;--c1:#ff8a3d;--c2:#3b82f6;--c3:#22a06b;--c4:#a855f7;--card:#fff;--r:22px}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:20px/1.4 system-ui,"Noto Sans Tamil","Latha","Nirmala UI",sans-serif;padding:env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left)}
+#app{max-width:900px;margin:auto;padding:12px}
+.bar{display:flex;gap:8px;align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:12px}.bar h1{font-size:1.2rem;margin:0}
+.btn{min-height:48px;min-width:48px;border:0;border-radius:var(--r);background:var(--c2);color:#fff;font:inherit;font-weight:700;padding:8px 18px;cursor:pointer;box-shadow:0 4px 0 rgba(0,0,0,.2)}
+.btn.alt{background:#fff;color:var(--ink);border:2px solid var(--c2)}.btn.go{background:var(--c3)}
+.btn:focus-visible,.card:focus-visible,.opt:focus-visible,.mem:focus-visible{outline:4px solid #111;outline-offset:3px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:14px}
+.card{background:var(--card);border:3px solid var(--c1);border-radius:var(--r);padding:16px;text-align:center;font:inherit;color:inherit;cursor:pointer;min-height:130px}
+.card .ic{font-size:3.2rem;display:block}.card.done::after{content:" ✓";color:var(--c3);font-weight:700}
+.big{font-size:min(28vw,9rem);line-height:1.1;text-align:center}.mid{font-size:min(16vw,5rem);text-align:center;word-break:break-word}
+.opts{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:16px 0}.opt{min-width:110px;min-height:110px;font-size:3rem;background:#fff;border:4px solid var(--c2);border-radius:var(--r);cursor:pointer;font-family:inherit}
+.opt.bad{opacity:.4;border-style:dashed}.opt.ok{border-color:var(--c3);background:#e6f9ee}
+.msg{text-align:center;font-weight:700;min-height:2em}.row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin:10px 0}
+.mem{font-size:2.6rem;min-height:84px;background:var(--c4);color:#fff;border:0;border-radius:16px;cursor:pointer}.mem.up{background:#fff;color:var(--ink);border:3px solid var(--c4)}
+.panel{background:#fff;border-radius:var(--r);padding:16px;margin:10px 0}.panel label{display:block;margin:8px 0}
+@keyframes pop{from{transform:scale(.8)}to{transform:scale(1)}}.pop{animation:pop .25s}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}.rm *{animation:none!important}
